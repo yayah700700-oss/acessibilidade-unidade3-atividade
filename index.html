@@ -321,42 +321,40 @@
 
   </section>
 
-    <h3>Fale com um vendedor</h3>
+  <section class="formulario">
+    <h1>Fale com um vendedor</h1>
+      <p class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</p>
+        <form action="/enviar" method="post">
+          <label for=""><b>Nome completo *</b></label>
+            <input type="text" class="nomeEmailSenhaTel" id="nome" placeholder="Digite seu nome completo" required>
+              <p class="campoObrigatorio">Campo obrigatório.</p>
+          <label for=""><b>E-mail *</b></label>
+            <input type="email" class="nomeEmailSenhaTel" id="email" placeholder="E-mail *" required>
+              <p class="campoObrigatorio">Campo obrigatório.</p>
+            <input type="password" class="nomeEmailSenhaTel" id="senha" placeholder="Crie uma senha" required>
+              <p class="campoObrigatorio">Campo obrigatório.</p>
+          <label for=""><b>Telefone</b></label>
+            <input type="tel" class="nomeEmailSenhaTel" id="telefone" placeholder="(00) 00000-0000">
+            
+            <fieldset>
+              <legend><b>Turno preferido para contato *</b></legend>
+                <label for=""><input type="radio" name="turno" id="manha" value="manha" required> Manhã<br></label>
+                <label for=""><input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br></label>
+                <label for=""><input type="radio" name="turno" id="noite" value="noite"> Noite</label>
+            </fieldset>
 
-    <div class="aviso">Os campos marcados com <span style="color:#c0392b">*</span> são obrigatórios.</div>
+            <fieldset>
+              <legend><b>Assuntos de interesse</b></legend>
+                <label for=""><input type="checkbox" name="int" id="i1"> Guitarras<br></label>
+                <label for=""><input type="checkbox" name="int" id="i2"> Baterias<br></label>
+                <label for=""><input type="checkbox" name="int" id="i3"> Teclados</label>
+            </fieldset>
 
-    <form action="/enviar" method="post">
+            <button class="botao" onclick="enviarFormulario()">Enviar</button>
+        </form>
+  </section>
 
-      <div style="font-weight:600; margin:14px 0 6px;">Nome completo *</div>
-      <input type="text" id="nome" placeholder="Digite seu nome completo">
-
-      <input type="email" id="email" placeholder="E-mail *">
-      <div class="erro">Erro.</div>
-
-      <label>Telefone</label>
-      <input type="text" id="telefone" placeholder="(00) 00000-0000">
-
-      <input type="password" id="senha" placeholder="Crie uma senha">
-      <div class="erro">Erro.</div>
-
-      <div style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</div>
-      <div>
-        <input type="radio" name="turno" id="manha" value="manha"> Manhã<br>
-        <input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br>
-        <input type="radio" name="turno" id="noite" value="noite"> Noite
-      </div>
-
-      <div style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</div>
-      <div>
-        <input type="checkbox" name="int" id="i1"> Guitarras<br>
-        <input type="checkbox" name="int" id="i2"> Baterias<br>
-        <input type="checkbox" name="int" id="i3"> Teclados
-      </div>
-
-      <p><a href="#" onclick="enviarFormulario()" class="botao">Enviar</a></p>
-
-    </form>
-  </main>
+</main>
 
   <div>
 
